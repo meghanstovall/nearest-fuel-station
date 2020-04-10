@@ -1,0 +1,14 @@
+<h1>Closest Fuel Station: </h1>
+
+<ul class="station">
+  <li id="name"> <%= @station[:station_name] %></li>
+  <li id="address"> <%= @station[:street_address] %></li>
+  <li id="fuel_type"> <%= @station[:fuel_type_code] %></li>
+  <li id="access_times"> <%= @station[:access_days_time] %></li>
+</ul>
+
+<ul class="directions">
+  <li id="distance"> <%= @directions[:distance][:text] %></li>
+  <li id="travel_time"> <%= @directions[:duration][:text] %></li>
+  <li id="directions"> <%= @directions[:steps][0][:html_instructions] %></li>
+</ul>
