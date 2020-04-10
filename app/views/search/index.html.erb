@@ -1,14 +1,14 @@
 <h1>Closest Fuel Station: </h1>
 
 <ul class="station">
-  <li id="name"> <%= @search_facade.name %></li>
-  <li id="address"> <%= @search_facade.address %></li>
-  <li id="fuel_type"> <%= @search_facade.fuel_type %></li>
-  <li id="access_times"> <%= @search_facade.access_times %></li>
+  <li id="name"> <%= @search_facade.station.name %></li>
+  <li id="address"> <%= @search_facade.station.address %></li>
+  <li id="fuel_type"> <%= @search_facade.station.fuel_type %></li>
+  <li id="access_times"> <%= @search_facade.station.access_times %></li>
 </ul>
 
 <ul class="directions">
-  <li id="distance"> <%= @search_facade.distance %></li>
-  <li id="travel_time"> <%= @search_facade.duration %></li>
-  <li id="directions"> <%= @search_facade.instructions %></li>
+  <li id="distance"> <%= @search_facade.directions.distance %></li>
+  <li id="travel_time"> <%= @search_facade.directions.duration %></li>
+  <li id="directions"> <%= @search_facade.directions.instructions %></li>
 </ul>
