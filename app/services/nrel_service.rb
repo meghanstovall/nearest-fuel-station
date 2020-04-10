@@ -1,8 +1,8 @@
 class NRELService
 
   def self.conn(location)
-    stations_response = Faraday.get("https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?location=#{location.street},#{location.city},#{location.state},#{location.zip}&api_key=#{ENV['NREL_API_KEY']}")
-    get_data(JSON.parse(stations_response.body, symbolize_names: true))
+    response = Faraday.get("https://developer.nrel.gov/api/alt-fuel-stations/v1/nearest.json?location=#{location.street},#{location.city},#{location.state},#{location.zip}&api_key=#{ENV['NREL_API_KEY']}")
+    get_data(JSON.parse(response.body, symbolize_names: true))
   end
 
   private
