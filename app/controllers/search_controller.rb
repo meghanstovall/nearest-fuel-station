@@ -1,9 +1,5 @@
 class SearchController < ApplicationController
   def index
-    location = Location.new(params[:location])
-
-    @station = NRELService.conn(location)
-    @directions = GoogleService.conn(location, @station)
-
+    @search_facade = SearchFacade.new(params[:location])
   end
 end
